@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>KKT RAG Admin</title>
+<style>
+body{font-family:Arial;padding:30px}
+table{border-collapse:collapse;width:70%}
+th,td{border:1px solid #ccc;padding:8px}
+button{padding:5px 10px;margin:4px}
+</style>
+</head>
+
+<body>
+
+<h2>KKT Secure Modular RAG Engine — Admin</h2>
+
+<!-- LOGIN FOR ADMIN -->
+<div id="authSection">
+    <h3>Admin Login</h3>
+    <input type="text" id="adminUser" placeholder="Username">
+    <input type="password" id="adminPass" placeholder="Password">
+    <button onclick="loginAdmin()">Login</button>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="adminPanel" style="display:none;">
+
+<h3>Upload and Index Document</h3>
+<input type="file" id="fileInput">
+<button onclick="uploadDocument()">Upload & Index</button>
+
+<br><br>
+
+<button onclick="loadDocs()">Refresh Documents</button>
+<button onclick="deleteFolder()">Delete Knowledge</button>
+<button onclick="resetIndex()">Reset Index</button>
+
+<br><br>
+
+<table id="docTable">
+<tr>
+<th>Document</th>
+<th>Chunks</th>
+<th>Action</th>
+</tr>
+</table>
+
+</div>
+
+<script src="/static/admin.js?v=1"></script>
+</body>
+</html>

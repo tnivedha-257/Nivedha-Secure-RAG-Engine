@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>KKT Secure Modular RAG Engine</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+<h1>KKT Secure Modular RAG Engine</h1>
+
+<!-- LOGIN / REGISTER -->
+
+<div id="authSection">
+
+<h2>Register</h2>
+
+<input type="text" id="regUser" placeholder="Username">
+<input type="password" id="regPass" placeholder="Password">
+<button onclick="register()">Register</button>
+
+<h2>Login</h2>
+
+<input type="text" id="loginUser" placeholder="Username">
+<input type="password" id="loginPass" placeholder="Password">
+<button onclick="login()">Login</button>
+
+</div>
+
+
+<!-- MAIN APP -->
+
+<div id="mainApp" style="display:none;">
+ 
+<h2>Chat</h2>
+ 
+<div class="ref-section">
+</div>
+
+<!-- NEW: Model change confirmation message -->
+<div id="modelInfo" style="margin-top:8px;color:green;font-weight:bold;"></div>
+
+<div class="ref-section">
+
+    <label>
+        <input type="checkbox" id="refInline">
+        <span>Inline Citation</span>
+    </label>
+
+    <label>
+        <input type="checkbox" id="refList">
+        <span>Bibliography</span>
+    </label>
+
+</div>
+
+<h2>Chat</h2>
+
+<div id="chatWindow"></div>
+
+<div id="chatControls">
+
+<input type="text" id="questionInput" placeholder="Ask a question">
+
+<button onclick="sendQuestion()">Send</button>
+
+<button onclick="startVoice()">🎤 Voice</button>
+
+<button onclick="readChat()">🔈Read</button>
+
+<button onclick="stopVoice()">Stop</button>
+
+<button onclick="saveChatAsPDF()">📄 Save as PDF</button>
+
+</div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
